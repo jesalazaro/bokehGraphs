@@ -34,7 +34,8 @@ def starter(request):
     plot.title.text_font_size = '20pt'
     
     plot.xaxis.major_label_text_font_size = "14pt" 
-    plot.line(weeks, patients)
+    plot.vbar(weeks, top=patients, width=.4, color= "firebrick", legend="Product Counts")
+    #plot.line(weeks, patients)
     plot.legend.label_text_font_size = '14pt'
 
     script, div = components(plot)
